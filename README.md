@@ -1,24 +1,15 @@
-# README
+# Useful
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple email-authentication based user accounts system built in rails.
 
-Things you may want to cover:
+Here's how it works:
 
-* Ruby version
+* Clients sends a POST request to /sessions/start with an 'email' parameter.
 
-* System dependencies
+* The server sends an email to the user with a link containing JWT token.
 
-* Configuration
+* When the email link is clicked, the email is verified and a user account is made on the users table if one doesn't exist, user accounts are made AFTER email verification, ensuring all emails in your db are real.
 
-* Database creation
+* The server re-directs the user to a configurable route and passes a session JWT token as a parameter.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This boiler-plate is designed to be as simple as possible.
