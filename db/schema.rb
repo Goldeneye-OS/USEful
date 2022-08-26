@@ -14,16 +14,9 @@ ActiveRecord::Schema.define(version: 2021_12_30_230356) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
-    t.string "fingerprint"
-    t.string "appleID"
-    t.string "subscription"
-    t.string "session_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["appleID"], name: "index_users_on_appleID"
     t.index ["email"], name: "index_users_on_email"
-    t.index ["fingerprint"], name: "index_users_on_fingerprint"
-    t.index ["subscription"], name: "index_users_on_subscription"
   end
 
 end
