@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   adapter: pg
-  database: handsome-api
+  database: <%= ActiveRecord::Base.connection.current_database %>
   url: <%= ENV['DATABASE_URL'] %>
