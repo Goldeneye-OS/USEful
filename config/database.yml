@@ -23,4 +23,5 @@ test:
 production:
   <<: *default
   adapter: pg
+  database: handsome-api
   url: <%= ENV['DATABASE_URL'] %>
