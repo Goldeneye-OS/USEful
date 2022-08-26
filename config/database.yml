@@ -22,6 +22,5 @@ test:
 
 production:
   <<: *default
-  database: environment_production
-  username: environment
-  password: <%= ENV['ENVIRONMENT_DATABASE_PASSWORD'] %>
+  adapter: pg
+  url: <%= ENV['DATABASE_URL'] %>
