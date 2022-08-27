@@ -26,7 +26,8 @@ class SessionsController < ApplicationController
 		SessionMailer.with(
 			t: token, 
 			host: url,
-			port: port
+			port: port,
+			to: params[:email]
 		).signin.deliver_now
 		render json: { 
 			status: "ok" 
